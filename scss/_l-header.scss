@@ -60,6 +60,10 @@
         flex: 1 1 auto;
         justify-content: flex-end;
       }
+
+      @include mobile {
+        gap: 15px;
+      }
     }
 
     & .button {

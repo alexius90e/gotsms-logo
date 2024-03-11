@@ -1,0 +1,151 @@
+.custom-select {
+  position: relative;
+  margin: 0;
+  width: min-content;
+  border: none;
+
+  & select {
+    display: none;
+  }
+
+  & .select-selected {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    color: $black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    user-select: none;
+    cursor: pointer;
+
+    @include mobile {
+      max-width: 130px;
+      width: 100%;
+      font-size: 13px;
+    }
+
+    & > span {
+      display: inline-block;
+      min-width: 24px;
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include mobile {
+        max-width: 115px;
+      }
+    }
+
+    &::before {
+      content: '';
+      height: 24px;
+      width: 24px;
+      background-image: url(../assets/icons/globe.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      filter: brightness(0);
+
+      @include mobile {
+        height: 18px;
+        width: 18px;
+      }
+    }
+
+    &::after {
+      content: '';
+      height: 5px;
+      width: 9px;
+      background-image: url(../assets/icons/arrow.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      transition: all ease-in-out 0.1s;
+      filter: brightness(0);
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &.active {
+      color: $black;
+    }
+
+    &.active::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  & .select-hide {
+    display: none !important;
+  }
+
+  & .select-items {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 12px;
+    max-height: 288px;
+    min-width: max-content;
+    overflow-y: auto;
+    color: $black;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 8px;
+    background-color: $white;
+    box-shadow: 0 0 12px rgba($color: $black, $alpha: 0.1);
+
+    @include mobile {
+      font-size: 13px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 8px;
+      background-color: $gray;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: $gray;
+    }
+
+    & .same-as-selected {
+      font-weight: 700;
+    }
+
+    & .select-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px;
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+
+  & .select-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+  }
+}

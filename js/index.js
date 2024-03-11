@@ -1,3 +1,5 @@
+import './custom-select.js';
+
 const themeTogglers = document.querySelectorAll('.theme-toggler');
 
 themeTogglers.forEach((themeToggler) => {
