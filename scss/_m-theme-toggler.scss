@@ -1,0 +1,67 @@
+.theme-toggler {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 54px;
+  padding: 4px;
+  box-sizing: border-box;
+  border: 1px solid rgba($color: $black, $alpha: 0.3);
+  border-radius: 54px;
+  transition: border ease-in-out 0.3s;
+  cursor: pointer;
+
+  &_dark {
+    border: 1px solid rgba($color: $white, $alpha: 0.3);
+  }
+
+  &__moon,
+  &__sun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 54px;
+    transition: background-color ease-in-out 0.3s;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 24px;
+      width: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 24px;
+      transition: filter ease-in-out 0.3s;
+    }
+  }
+
+  &__moon {
+    background-color: rgba($color: #1c2236, $alpha: 0);
+
+    &::before {
+      background-image: url(../assets/moon.svg);
+      filter: brightness(0);
+    }
+  }
+
+  &_dark &__moon {
+    background-color: rgba($color: #1c2236, $alpha: 1);
+
+    &::before {
+      filter: brightness(1);
+    }
+  }
+
+  &__sun {
+    background-color: rgba($color: #e8e8e8, $alpha: 1);
+
+    &::before {
+      background-image: url(../assets/sun.svg);
+    }
+  }
+
+  &_dark &__sun {
+    background-color: rgba($color: #e8e8e8, $alpha: 0);
+  }
+}

@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+html {
+  color: #070707;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.theme-toggler {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 54px;
+  padding: 4px;
+  box-sizing: border-box;
+  border: 1px solid rgba(7, 7, 7, 0.3);
+  border-radius: 54px;
+  transition: border ease-in-out 0.3s;
+  cursor: pointer;
+}
+.theme-toggler_dark {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.theme-toggler__moon, .theme-toggler__sun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 54px;
+  transition: background-color ease-in-out 0.3s;
+}
+.theme-toggler__moon::before, .theme-toggler__sun::before {
+  content: "";
+  display: block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  transition: filter ease-in-out 0.3s;
+}
+.theme-toggler__moon {
+  background-color: rgba(28, 34, 54, 0);
+}
+.theme-toggler__moon::before {
+  background-image: url(../assets/moon.svg);
+  filter: brightness(0);
+}
+.theme-toggler_dark .theme-toggler__moon {
+  background-color: #1c2236;
+}
+.theme-toggler_dark .theme-toggler__moon::before {
+  filter: brightness(1);
+}
+.theme-toggler__sun {
+  background-color: #e8e8e8;
+}
+.theme-toggler__sun::before {
+  background-image: url(../assets/sun.svg);
+}
+.theme-toggler_dark .theme-toggler__sun {
+  background-color: rgba(232, 232, 232, 0);
+}
+
+.button {
+  height: 54px;
+  padding: 0 31px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background-color: #3f3f3f;
+  transition: all ease-in-out 0.15s;
+  will-change: transform;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.02);
+}
+.button_secondary {
+  color: #070707;
+  border: 1px solid rgba(7, 7, 7, 0.3);
+  background-color: rgba(255, 255, 255, 0);
+}
+.button_secondary:hover {
+  border-color: #697eed;
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1460px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 30px 0;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+@media (max-width: 1440px) {
+  .header .container {
+    gap: 35px;
+  }
+}
+@media (max-width: 992px) {
+  .header .container {
+    gap: 24px;
+  }
+}
+.header .logo {
+  flex: 0 0 auto;
+}
+.header__nav {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 10px;
+}
+@media (max-width: 1440px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #070707;
+  transform: all ease-in-out 0.15s;
+}
+.header__nav-link:hover {
+  color: #697eed;
+}
+.header__block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 992px) {
+  .header__block {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}
+.header__block:last-child {
+  gap: 20px;
+}
+@media (max-width: 1440px) {
+  .header__block:last-child {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+}
+.header__block .button {
+  flex: 0 0 auto;
+}
+@media (max-width: 576px) {
+  .header .theme-toggler {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .header__subscription {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .header__login {
+    display: none;
+  }
+}
+.header__burger {
+  display: none;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-image: url(../assets/icons/burger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+@media (max-width: 1440px) {
+  .header__burger {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,104 @@
+.header {
+  padding: 30px 0;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @include desktop {
+      gap: 35px;
+    }
+
+    @include laptop {
+      gap: 24px;
+    }
+  }
+
+  & .logo {
+    flex: 0 0 auto;
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 10px;
+
+    @include desktop {
+      display: none;
+    }
+
+    &-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      color: $black;
+      transform: $baseTransition;
+
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include laptop {
+      flex: 1 1 auto;
+      justify-content: center;
+    }
+
+    &:last-child {
+      gap: 20px;
+
+      @include desktop {
+        flex: 1 1 auto;
+        justify-content: flex-end;
+      }
+    }
+
+    & .button {
+      flex: 0 0 auto;
+    }
+  }
+
+  & .theme-toggler {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__subscription {
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &__login {
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-image: url(../assets/icons/burger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba($color: $white, $alpha: 0);
+    cursor: pointer;
+
+    @include desktop {
+      display: inline-block;
+    }
+  }
+}
