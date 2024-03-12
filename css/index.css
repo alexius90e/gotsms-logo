@@ -586,3 +586,143 @@ img {
     font-size: 14px;
   }
 }
+
+.services {
+  position: relative;
+  padding: 247px 0 257px;
+}
+@media (max-width: 1440px) {
+  .services {
+    padding: 177px 0 181px;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    padding: 140px 0 138px;
+  }
+}
+.services::before, .services::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 57px;
+  background-color: #f9f9f9;
+}
+@media (max-width: 1440px) {
+  .services::before, .services::after {
+    height: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .services::before, .services::after {
+    height: 28px;
+  }
+}
+.services::before {
+  top: 40px;
+}
+@media (max-width: 1440px) {
+  .services::before {
+    top: 34px;
+  }
+}
+@media (max-width: 768px) {
+  .services::before {
+    top: 21px;
+  }
+}
+.services::after {
+  bottom: 50px;
+}
+@media (max-width: 1440px) {
+  .services::after {
+    bottom: 38px;
+  }
+}
+@media (max-width: 768px) {
+  .services::after {
+    bottom: 20px;
+  }
+}
+.services__title {
+  margin: 0 0 108px;
+}
+@media (max-width: 1440px) {
+  .services__title {
+    margin: 0 0 80px;
+  }
+}
+@media (max-width: 768px) {
+  .services__title {
+    margin: 0 0 50px;
+  }
+}
+.services__cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 53px 24px;
+}
+@media (max-width: 992px) {
+  .services__cards {
+    gap: 36px 24px;
+  }
+}
+.services__card {
+  flex: 0 0 calc(20% - 19.2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .services__card {
+    flex: 0 0 calc(25% - 18px);
+  }
+}
+@media (max-width: 768px) {
+  .services__card {
+    flex: 0 0 calc(33.3333333333% - 16px);
+  }
+}
+@media (max-width: 576px) {
+  .services__card {
+    flex: 0 0 calc(50% - 12px);
+  }
+}
+.services__card-image {
+  max-width: 100%;
+  height: auto;
+}
+.services__more {
+  margin: 69px 0 0;
+  text-align: center;
+}
+@media (max-width: 1440px) {
+  .services__more {
+    margin: 60px 0 0;
+  }
+}
+@media (max-width: 768px) {
+  .services__more {
+    margin: 30px 0 0;
+  }
+}
+.services__more-link {
+  color: #1e1e1e;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 110%;
+  opacity: 0.2;
+}
+@media (max-width: 1440px) {
+  .services__more {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .services__more {
+    font-size: 14px;
+  }
+}

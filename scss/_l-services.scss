@@ -1,0 +1,133 @@
+.services {
+  position: relative;
+  padding: 247px 0 257px;
+
+  @include desktop {
+    padding: 177px 0 181px;
+  }
+
+  @include tablet {
+    padding: 140px 0 138px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 57px;
+    background-color: $gray;
+
+    @include desktop {
+      height: 48px;
+    }
+
+    @include tablet {
+      height: 28px;
+    }
+  }
+
+  &::before {
+    top: 40px;
+
+    @include desktop {
+      top: 34px;
+    }
+
+    @include tablet {
+      top: 21px;
+    }
+  }
+
+  &::after {
+    bottom: 50px;
+
+    @include desktop {
+      bottom: 38px;
+    }
+
+    @include tablet {
+      bottom: 20px;
+    }
+  }
+
+  
+
+  &__title {
+    margin: 0 0 108px;
+
+    @include desktop {
+      margin: 0 0 80px;
+    }
+
+    @include tablet {
+      margin: 0 0 50px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 53px 24px;
+
+    @include laptop {
+      gap: 36px 24px;
+    }
+  }
+
+  &__card {
+    flex: 0 0 calc(100% / 5 - 24px / 5 * 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include laptop {
+      flex: 0 0 calc(100% / 4 - 24px / 4 * 3);
+    }
+
+    @include tablet {
+      flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+    }
+
+    @include mobile {
+      flex: 0 0 calc(100% / 2 - 24px / 2);
+    }
+
+    &-image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__more {
+    margin: 69px 0 0;
+    text-align: center;
+
+    @include desktop {
+      margin: 60px 0 0;
+    }
+
+    @include tablet {
+      margin: 30px 0 0;
+    }
+
+    &-link {
+      color: #1e1e1e;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 110%;
+      opacity: 0.2;
+    }
+
+    @include desktop {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+}
