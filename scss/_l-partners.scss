@@ -1,0 +1,60 @@
+.partners {
+  padding: 46px 0 41px;
+  background-color: $gray;
+
+  @include desktop {
+    padding: 36px 0;
+  }
+
+  @include tablet {
+    padding: 37px 0 34px;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 31px 24px;
+  }
+
+  &__logo {
+    display: block;
+    max-height: 44px;
+    width: auto;
+    filter: brightness(0);
+
+    @include desktop {
+      max-height: 36px;
+    }
+
+    @include tablet {
+      flex: 1 1 40%;
+    }
+
+    @include mobile {
+      max-height: 25px;
+    }
+  }
+
+  &__link {
+    color: $black;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+    text-align: center;
+    opacity: 0.2;
+
+    @include desktop {
+      font-size: 16px;
+    }
+
+    @include laptop {
+      flex: 0 0 100%;
+    }
+
+    @include tablet {
+      font-size: 13px;
+    }
+  }
+}
