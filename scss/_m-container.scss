@@ -4,4 +4,16 @@
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
+
+  @include desktop {
+    max-width: 1088px;
+  }
+
+  @include laptop {
+    max-width: 768px;
+  }
+
+  @include tablet {
+    max-width: 586px;
+  }
 }

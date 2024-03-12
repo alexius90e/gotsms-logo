@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-
 html {
   color: $black;
   font-size: 16px;
@@ -15,6 +14,32 @@ body {
   margin: 0;
   overflow-y: scroll;
   background-color: $white;
+}
+
+h2 {
+  margin: 0;
+  font-size: 80px;
+  line-height: 110%;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $black;
+  text-align: center;
+
+  @include desktop {
+    font-size: 55px;
+  }
+
+  @include laptop {
+    font-size: 45px;
+  }
+
+  @include tablet {
+    font-size: 40px;
+  }
+
+  @include mobile {
+    font-size: 35px;
+  }
 }
 
 a {

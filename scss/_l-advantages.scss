@@ -1,0 +1,134 @@
+.advantages {
+  padding: 112px 0 98px;
+  background-color: $gray;
+
+  @include desktop {
+    padding: 112px 0 67px;
+  }
+
+  @include tablet {
+    padding: 64px 0 60px;
+  }
+
+  &__title {
+    margin: 0 0 93px;
+
+    @include desktop {
+      margin: 0 0 70px;
+    }
+
+    @include mobile {
+      margin: 0 0 51px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 100px;
+    max-width: 934px;
+    margin: 0 auto 93px;
+
+    @include desktop {
+      margin: 0 auto 70px;
+    }
+
+    @include tablet {
+      gap: 45px 30px;
+      margin: 0 auto 50px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    flex: 0 0 calc(50% - 50px);
+
+    @include tablet {
+      flex: 0 0 calc(50% - 15px);
+    }
+
+    @include mobile {
+      flex: 1 1 calc(100%);
+      padding-left: 54px;
+    }
+
+    &-figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 30px;
+      filter: brightness(0);
+
+      @include tablet {
+        margin: 0 0 15px;
+      }
+
+      @include mobile {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin: 0;
+        transform: translateY(-50%);
+      }
+
+      &-image {
+        max-width: 100%;
+        height: auto;
+
+        @include tablet {
+          max-width: 42px;
+        }
+      }
+    }
+
+    &-number {
+      margin: 0 0 20px;
+      font-weight: 600;
+      font-size: 20px;
+      text-align: center;
+
+      @include tablet {
+        margin: 0 0 15px;
+        font-size: 14px;
+      }
+
+      @include mobile {
+        text-align: left;
+      }
+    }
+
+    &-text {
+      margin: 0;
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+      opacity: 0.6;
+
+      @include tablet {
+        font-size: 12px;
+      }
+
+      @include mobile {
+        text-align: left;
+      }
+    }
+  }
+
+  &__description {
+    max-width: 480px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+
+    @include desktop {
+      max-width: 342px;
+      font-size: 18px;
+    }
+
+    @include tablet {
+      max-width: 236px;
+      font-size: 14px;
+    }
+  }
+}

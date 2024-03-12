@@ -15,6 +15,36 @@ body {
   background-color: #ffffff;
 }
 
+h2 {
+  margin: 0;
+  font-size: 80px;
+  line-height: 110%;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #070707;
+  text-align: center;
+}
+@media (max-width: 1440px) {
+  h2 {
+    font-size: 55px;
+  }
+}
+@media (max-width: 992px) {
+  h2 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 35px;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -100,14 +130,18 @@ img {
   font-size: 16px;
   line-height: normal;
   text-transform: uppercase;
+  border: 1px solid #3f3f3f;
   border-radius: 50px;
   background-color: #3f3f3f;
-  transition: all ease-in-out 0.15s;
-  will-change: transform;
+  transition: transform ease-in-out 0.1s, border ease-in-out 0.3s;
+  will-change: transform, border;
   cursor: pointer;
 }
 .button:hover {
   transform: scale(1.02);
+}
+.button:active {
+  transform: scale(1);
 }
 .button_secondary {
   color: #070707;
@@ -140,6 +174,21 @@ img {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
+}
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1088px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 586px;
+  }
 }
 
 .custom-select {
@@ -391,5 +440,149 @@ img {
 @media (max-width: 1440px) {
   .header__burger {
     display: inline-block;
+  }
+}
+
+.advantages {
+  padding: 112px 0 98px;
+  background-color: #f9f9f9;
+}
+@media (max-width: 1440px) {
+  .advantages {
+    padding: 112px 0 67px;
+  }
+}
+@media (max-width: 768px) {
+  .advantages {
+    padding: 64px 0 60px;
+  }
+}
+.advantages__title {
+  margin: 0 0 93px;
+}
+@media (max-width: 1440px) {
+  .advantages__title {
+    margin: 0 0 70px;
+  }
+}
+@media (max-width: 576px) {
+  .advantages__title {
+    margin: 0 0 51px;
+  }
+}
+.advantages__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px 100px;
+  max-width: 934px;
+  margin: 0 auto 93px;
+}
+@media (max-width: 1440px) {
+  .advantages__cards {
+    margin: 0 auto 70px;
+  }
+}
+@media (max-width: 768px) {
+  .advantages__cards {
+    gap: 45px 30px;
+    margin: 0 auto 50px;
+  }
+}
+.advantages__card {
+  position: relative;
+  flex: 0 0 calc(50% - 50px);
+}
+@media (max-width: 768px) {
+  .advantages__card {
+    flex: 0 0 calc(50% - 15px);
+  }
+}
+@media (max-width: 576px) {
+  .advantages__card {
+    flex: 1 1 100%;
+    padding-left: 54px;
+  }
+}
+.advantages__card-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 30px;
+  filter: brightness(0);
+}
+@media (max-width: 768px) {
+  .advantages__card-figure {
+    margin: 0 0 15px;
+  }
+}
+@media (max-width: 576px) {
+  .advantages__card-figure {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 0;
+    transform: translateY(-50%);
+  }
+}
+.advantages__card-figure-image {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .advantages__card-figure-image {
+    max-width: 42px;
+  }
+}
+.advantages__card-number {
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .advantages__card-number {
+    margin: 0 0 15px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .advantages__card-number {
+    text-align: left;
+  }
+}
+.advantages__card-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0.6;
+}
+@media (max-width: 768px) {
+  .advantages__card-text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .advantages__card-text {
+    text-align: left;
+  }
+}
+.advantages__description {
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+@media (max-width: 1440px) {
+  .advantages__description {
+    max-width: 342px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .advantages__description {
+    max-width: 236px;
+    font-size: 14px;
   }
 }
