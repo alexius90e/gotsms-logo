@@ -1,0 +1,269 @@
+.about {
+  position: relative;
+  overflow: hidden;
+  background: url(../assets/about-bg.svg) top left no-repeat;
+  background-size: 592px;
+
+  @include desktop {
+    background-size: 550px;
+  }
+
+  @include laptop {
+    background-size: 500px;
+  }
+
+  @include tablet {
+    background-size: 430px;
+  }
+
+  @include mobile {
+    background-size: 336px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    height: 57px;
+    background-color: $gray;
+
+    @include desktop {
+      bottom: 38px;
+      height: 48px;
+    }
+
+    @include tablet {
+      bottom: 20px;
+      height: 28px;
+    }
+  }
+
+  & .container {
+    display: flex;
+    gap: 244px;
+
+    @include desktop {
+      gap: 110px;
+    }
+
+    @include laptop {
+      gap: 80px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      gap: 50px;
+      padding-top: 68px;
+      padding-bottom: 68px;
+    }
+  }
+
+  &__text {
+    flex: 0 0 auto;
+    padding: 315px 0 421px;
+
+    @include desktop {
+      padding: 170px 0 256px;
+    }
+
+    @include laptop {
+      padding: 120px 0;
+    }
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 79px;
+    text-align: left;
+
+    @include desktop {
+      margin: 0 0 96px;
+    }
+
+    @include laptop {
+      margin: 0 0 31px;
+    }
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__services {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin: 0 0 88px;
+
+    @include desktop {
+      gap: 25px;
+      margin: 0 0 70px;
+    }
+
+    @include laptop {
+      align-items: flex-start;
+      flex-direction: column-reverse;
+      margin: 0 0 31px;
+    }
+
+    @include tablet {
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+      @include laptop {
+        max-width: 180px;
+      }
+
+      @include tablet {
+        max-width: 128px;
+      }
+    }
+
+    &-info {
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &-count {
+        margin: 0 0 15px;
+        color: #383838;
+        font-family: 'Benzin Bold', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 110%;
+        text-transform: uppercase;
+
+        @include desktop {
+          margin: 0 0 12px;
+          font-size: 24px;
+        }
+
+        @include tablet {
+          margin: 0 0 10px;
+          font-size: 18px;
+        }
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 20px;
+
+        @include desktop {
+          font-size: 16px;
+        }
+
+        @include tablet {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &__accept {
+    &-text {
+      margin-bottom: -10px;
+      font-weight: 400;
+      font-size: 20px;
+
+      @include desktop {
+        font-size: 16px;
+      }
+
+      @include tablet {
+        margin-bottom: 0;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+
+    &-images {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 19px 65px;
+      max-width: 532px;
+      width: 100%;
+      box-sizing: border-box;
+
+      @include laptop {
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 12px;
+      }
+
+      @include tablet {
+        align-items: center;
+      }
+
+      &-item {
+        display: block;
+        max-height: 53px;
+        width: auto;
+        filter: brightness(0);
+
+        @include desktop {
+          max-height: 51px;
+        }
+
+        @include laptop {
+          max-height: 45px;
+        }
+
+        @include tablet {
+          max-height: 37px;
+        }
+      }
+    }
+  }
+
+  &__figure {
+    flex: 1 1 auto;
+    position: relative;
+
+    @include tablet {
+      overflow: hidden;
+      margin-right: -20px;
+    }
+
+    &-image {
+      position: absolute;
+      left: 0;
+      bottom: 85px;
+      max-width: none;
+      width: 1037px;
+      aspect-ratio: 1.0146771 / 1;
+      background: url(../assets/about-phone.svg) center no-repeat;
+      background-size: contain;
+
+      @include desktop {
+        width: 708px;
+      }
+
+      @include laptop {
+        width: 600px;
+        bottom: 0;
+      }
+
+      @include tablet {
+        position: static;
+
+        width: 130%;
+      }
+    }
+  }
+}

@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@font-face {
+  font-family: "Benzin Bold";
+  src: local("Benzin Bold"), local("Benzin-Bold"), url("../fonts/Benzin-Bold.woff2") format("woff2"), url("../fonts/Benzin-Bold.woff") format("woff"), url("../fonts/Benzin-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 html {
   color: #070707;
   font-size: 16px;
@@ -697,6 +703,294 @@ img {
     height: 61px;
     padding: 0 92px;
     font-size: 16px;
+  }
+}
+
+.about {
+  position: relative;
+  overflow: hidden;
+  background: url(../assets/about-bg.svg) top left no-repeat;
+  background-size: 592px;
+}
+@media (max-width: 1440px) {
+  .about {
+    background-size: 550px;
+  }
+}
+@media (max-width: 992px) {
+  .about {
+    background-size: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    background-size: 430px;
+  }
+}
+@media (max-width: 576px) {
+  .about {
+    background-size: 336px;
+  }
+}
+.about::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  height: 57px;
+  background-color: #f9f9f9;
+}
+@media (max-width: 1440px) {
+  .about::before {
+    bottom: 38px;
+    height: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .about::before {
+    bottom: 20px;
+    height: 28px;
+  }
+}
+.about .container {
+  display: flex;
+  gap: 244px;
+}
+@media (max-width: 1440px) {
+  .about .container {
+    gap: 110px;
+  }
+}
+@media (max-width: 992px) {
+  .about .container {
+    gap: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .about .container {
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+}
+.about__text {
+  flex: 0 0 auto;
+  padding: 315px 0 421px;
+}
+@media (max-width: 1440px) {
+  .about__text {
+    padding: 170px 0 256px;
+  }
+}
+@media (max-width: 992px) {
+  .about__text {
+    padding: 120px 0;
+  }
+}
+@media (max-width: 768px) {
+  .about__text {
+    padding: 0;
+  }
+}
+.about__title {
+  margin: 0 0 79px;
+  text-align: left;
+}
+@media (max-width: 1440px) {
+  .about__title {
+    margin: 0 0 96px;
+  }
+}
+@media (max-width: 992px) {
+  .about__title {
+    margin: 0 0 31px;
+  }
+}
+@media (max-width: 768px) {
+  .about__title {
+    text-align: center;
+  }
+}
+.about__services {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  margin: 0 0 88px;
+}
+@media (max-width: 1440px) {
+  .about__services {
+    gap: 25px;
+    margin: 0 0 70px;
+  }
+}
+@media (max-width: 992px) {
+  .about__services {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    margin: 0 0 31px;
+  }
+}
+@media (max-width: 768px) {
+  .about__services {
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+.about__services-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 992px) {
+  .about__services-image {
+    max-width: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .about__services-image {
+    max-width: 128px;
+  }
+}
+@media (max-width: 768px) {
+  .about__services-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.about__services-info-count {
+  margin: 0 0 15px;
+  color: #383838;
+  font-family: "Benzin Bold", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+@media (max-width: 1440px) {
+  .about__services-info-count {
+    margin: 0 0 12px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .about__services-info-count {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+}
+.about__services-info-text {
+  font-weight: 400;
+  font-size: 20px;
+}
+@media (max-width: 1440px) {
+  .about__services-info-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .about__services-info-text {
+    font-size: 12px;
+  }
+}
+.about__accept-text {
+  margin-bottom: -10px;
+  font-weight: 400;
+  font-size: 20px;
+}
+@media (max-width: 1440px) {
+  .about__accept-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .about__accept-text {
+    margin-bottom: 0;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+.about__accept-images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 19px 65px;
+  max-width: 532px;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (max-width: 992px) {
+  .about__accept-images {
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .about__accept-images {
+    align-items: center;
+  }
+}
+.about__accept-images-item {
+  display: block;
+  max-height: 53px;
+  width: auto;
+  filter: brightness(0);
+}
+@media (max-width: 1440px) {
+  .about__accept-images-item {
+    max-height: 51px;
+  }
+}
+@media (max-width: 992px) {
+  .about__accept-images-item {
+    max-height: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .about__accept-images-item {
+    max-height: 37px;
+  }
+}
+.about__figure {
+  flex: 1 1 auto;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .about__figure {
+    overflow: hidden;
+    margin-right: -20px;
+  }
+}
+.about__figure-image {
+  position: absolute;
+  left: 0;
+  bottom: 85px;
+  max-width: none;
+  width: 1037px;
+  aspect-ratio: 1.0146771/1;
+  background: url(../assets/about-phone.svg) center no-repeat;
+  background-size: contain;
+}
+@media (max-width: 1440px) {
+  .about__figure-image {
+    width: 708px;
+  }
+}
+@media (max-width: 992px) {
+  .about__figure-image {
+    width: 600px;
+    bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .about__figure-image {
+    position: static;
+    width: 130%;
   }
 }
 
