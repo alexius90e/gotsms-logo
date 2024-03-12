@@ -1,3 +1,260 @@
 .footer {
+  position: relative;
+  padding: 110px 0 68px;
+  overflow: hidden;
+  color: $black;
+  background-color: $gray;
 
+  @include desktop {
+    padding: 87px 0 55px;
+  }
+
+  @include tablet {
+    padding: 59px 0 45px;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    background: url(../assets/circle-bg.svg) center no-repeat;
+  }
+
+  &::before {
+    top: -92px;
+    right: -85px;
+    height: 695px;
+    width: 695px;
+    background-size: 695px;
+
+    @include desktop {
+      top: -92px;
+      right: -469px;
+    }
+
+    @include tablet {
+      top: 90px;
+      right: -213px;
+      height: 539px;
+      width: 539px;
+      background-size: 539px;
+    }
+  }
+
+  &::after {
+    top: -76px;
+    right: 239px;
+    height: 491px;
+    width: 491px;
+    background-size: 491px;
+
+    @include desktop {
+      top: -15px;
+      right: 0;
+    }
+
+    @include tablet {
+      top: -92px;
+      right: 92px;
+    }
+  }
+
+  & .container {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include desktop {
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__description {
+    max-width: 484px;
+    margin: 0 auto 50px;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+
+    @include desktop {
+      max-width: 404px;
+      margin: 0 auto 35px;
+      font-size: 16px;
+    }
+
+    @include tablet {
+      max-width: 244px;
+      margin-bottom: 25px;
+      font-size: 12px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 180px;
+
+    @include desktop {
+      margin: 0 0 47px;
+    }
+
+    @include tablet {
+      margin-bottom: 38px;
+    }
+
+    & .button {
+      height: 70px;
+      padding: 0 82px;
+
+      @include tablet {
+        height: 60px;
+      }
+    }
+  }
+
+  &__logo {
+    margin-bottom: 61px;
+
+    @include desktop {
+      margin-bottom: 50px;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__contacts {
+    width: max-content;
+    margin: 0 auto 61px;
+
+    @include desktop {
+      margin: 0 auto 50px;
+    }
+
+    @include tablet {
+      margin: 0 auto 40px;
+    }
+
+    &-title {
+      margin-bottom: 15px;
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+
+      @include desktop {
+        font-size: 16px;
+      }
+
+      @include tablet {
+        margin-bottom: 9px;
+        font-size: 12px;
+      }
+    }
+
+    &-tg {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 6px;
+      padding-left: 62px;
+
+      &-figure {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 52px;
+        width: 52px;
+        border: 1px solid rgba($color: $black, $alpha: 0.2);
+        border-radius: 52px;
+        transform: translateY(-50%);
+
+        &-image {
+          display: block;
+          height: 29px;
+          width: 28px;
+          margin-right: 2px;
+          filter: brightness(0);
+        }
+      }
+
+      &-text {
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      &-link {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        color: #a8b8c5;
+      }
+    }
+  }
+
+  &__copyrights {
+    margin-bottom: 36px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0.4;
+
+    @include desktop {
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+      font-size: 12px;
+    }
+  }
+
+  &__docs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    @include tablet {
+      gap: 15px;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      color: $black;
+      font-weight: 500;
+      font-size: 18px;
+      opacity: 0.4;
+
+      @include desktop {
+        font-size: 14px;
+      }
+
+      @include tablet {
+        gap: 15px;
+        font-size: 12px;
+      }
+
+      &:first-child::after {
+        content: '|';
+      }
+    }
+  }
 }
