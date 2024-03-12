@@ -1,0 +1,237 @@
+.we-will-help {
+  position: relative;
+  overflow: hidden;
+  background-image: url(../assets/circle-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top -233px right -268px;
+  background-size: 690px;
+
+  @include desktop {
+    background-position: top -182px right -140px;
+    background-size: 530px;
+  }
+
+  @include tablet {
+    background-position: top -160px center;
+  }
+
+  @include mobile {
+    background-position: top -40px center;
+    background-size: calc(100% - 40px);
+  }
+
+  &:before,
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  &:before {
+    top: 126px;
+    left: 82px;
+    width: 560px;
+    aspect-ratio: 1.2222222 / 1;
+    background-image: url(../assets/ceils-left.svg);
+
+    @include desktop {
+      left: 157px;
+      width: 395px;
+    }
+
+    @include laptop {
+      top: 126px;
+      left: 20px;
+      width: 300px;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &::after {
+    top: 128px;
+    right: 38px;
+    width: 540px;
+    aspect-ratio: 0.8709677 / 1;
+    background-image: url(../assets/ceils-right.svg);
+
+    @include desktop {
+      right: 117px;
+      width: 383px;
+    }
+
+    @include laptop {
+      right: 20px;
+      width: 340px;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  & .container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    gap: 140px;
+
+    @include desktop {
+      gap: 92px;
+    }
+
+    @include laptop {
+      gap: 63px 24px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    flex: 0 0 762px;
+    max-width: 762px;
+    padding: 315px 0 225px;
+
+    @include desktop {
+      flex: 0 0 600px;
+      max-width: 600px;
+      padding: 230px 0 145px;
+    }
+
+    @include laptop {
+      flex: 0 0 440px;
+      max-width: 440px;
+    }
+
+    @include tablet {
+      flex: 0 1 auto;
+      max-width: none;
+      padding: 123px 0 0;
+    }
+  }
+
+  &__figure {
+    flex: 1 1 auto;
+    position: relative;
+
+    &-image {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      max-width: none;
+      width: 722px;
+      aspect-ratio: 1.1283 / 1;
+      background: url(../assets/phone-bg.svg) center no-repeat;
+      background-size: contain;
+
+      @include desktop {
+        width: 540px;
+      }
+
+      @include laptop {
+        width: 480px;
+      }
+
+      @include tablet {
+        position: static;
+        width: 100%;
+      }
+    }
+  }
+
+  &__question {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 90%;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: 32px;
+    }
+
+    @include tablet {
+      margin: 0 0 15px;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 90%;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: 50px;
+    }
+
+    @include laptop {
+      line-height: 120%;
+    }
+
+    @include tablet {
+      margin: 0 0 30px;
+      font-size: 35px;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    max-width: 666px;
+    margin: 0 0 59px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+    opacity: 0.6;
+
+    @include desktop {
+      max-width: 534px;
+      margin: 0 0 50px;
+      font-size: 16px;
+    }
+
+    @include tablet {
+      max-width: 666px;
+      margin: 0 0 31px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  &__buttons {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__login {
+    height: 88px;
+    padding: 0 158px;
+    font-size: 20px;
+
+    @include desktop {
+      height: 75px;
+      padding: 0 101px;
+      font-size: 18px;
+    }
+
+    @include tablet {
+      height: 61px;
+      padding: 0 92px;
+      font-size: 16px;
+    }
+  }
+}
