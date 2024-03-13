@@ -78,7 +78,7 @@
       }
 
       @include mobile {
-        top: 40px;
+        top: 42px;
       }
     }
 
@@ -95,10 +95,10 @@
       }
 
       & .logo__image {
-        max-width: 180px;
+        height: 50px;
 
         @include mobile {
-          max-width: 160px;
+          height: 46px;
         }
       }
     }
@@ -147,6 +147,15 @@
       @include mobile {
         font-size: 18px;
       }
+    }
+
+    .dark &-link {
+      color: $white;
+
+      &:hover {
+        color: $purple;
+      }
+
     }
   }
 

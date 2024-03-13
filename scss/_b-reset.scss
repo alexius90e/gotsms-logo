@@ -10,7 +10,6 @@
 }
 
 html {
-  color: $black;
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -22,7 +21,13 @@ body {
   position: relative;
   margin: 0;
   overflow-y: scroll;
+  color: $black;
   background-color: $white;
+
+  &.dark {
+    color: $white;
+    background-color: $darkBlue;
+  }
 }
 
 h2 {
@@ -31,7 +36,6 @@ h2 {
   line-height: 110%;
   font-weight: 800;
   text-transform: uppercase;
-  color: $black;
   text-align: center;
 
   @include desktop {

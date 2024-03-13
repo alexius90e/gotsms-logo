@@ -235,3 +235,22 @@
     }
   }
 }
+
+.dark .we-will-help {
+  background-image: url(../assets/circle-bg-dark.svg);
+
+  &:before {
+    background-image: url(../assets/ceils-left-dark.svg);
+  }
+
+  &::after {
+    background-image: url(../assets/ceils-right-dark.svg);
+  }
+
+  &__figure {
+    &-image {
+      background-image: url(../assets/phone-bg-dark.svg);
+      background-size: contain;
+    }
+  }
+}

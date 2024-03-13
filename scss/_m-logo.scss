@@ -6,12 +6,24 @@
   }
 
   &__image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    
-    @include mobile {
-      max-width: 107px;
+    display: inline-block;
+    height: 43px;
+    aspect-ratio: 3.65116279 / 1;
+    background: url(../assets/logo.svg) center no-repeat;
+    background-size: contain;
+
+    @include desktop {
+      height: 34px;
     }
+
+    @include mobile {
+      height: 29px;
+    }
+  }
+}
+
+.dark .logo {
+  &__image {
+    background-image: url(../assets/logo-dark.svg);
   }
 }

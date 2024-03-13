@@ -31,3 +31,19 @@
     }
   }
 }
+
+.dark .button {
+  color: $white;
+  border: 1px solid $purple;
+  background-color: $purple;
+
+  &_secondary {
+    color: $white;
+    border: 1px solid rgba($color: $white, $alpha: 0.3);
+    background-color: rgba($color: $white, $alpha: 0);
+
+    &:hover {
+      border-color: $purple;
+    }
+  }
+}

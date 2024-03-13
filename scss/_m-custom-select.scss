@@ -149,3 +149,26 @@
     z-index: 98;
   }
 }
+
+.dark .custom-select {
+  & .select-selected {
+    color: $white;
+
+    &::before {
+      filter: brightness(1);
+    }
+
+    &::after {
+      filter: brightness(1);
+    }
+
+    &.active {
+      color: $white;
+    }
+  }
+
+  & .select-items {
+    color: $white;
+    background-color: $purple;
+  }
+}
