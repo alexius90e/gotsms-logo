@@ -10,48 +10,6 @@
     padding: 140px 0 138px;
   }
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 57px;
-    background-color: $gray;
-
-    @include desktop {
-      height: 48px;
-    }
-
-    @include tablet {
-      height: 28px;
-    }
-  }
-
-  &::before {
-    top: 40px;
-
-    @include desktop {
-      top: 34px;
-    }
-
-    @include tablet {
-      top: 21px;
-    }
-  }
-
-  &::after {
-    bottom: 50px;
-
-    @include desktop {
-      bottom: 38px;
-    }
-
-    @include tablet {
-      bottom: 20px;
-    }
-  }
-
   &__title {
     margin: 0 0 108px;
 
@@ -131,11 +89,6 @@
 }
 
 .dark .services {
-  &::before,
-  &::after {
-    background-color: $black;
-  }
-
   &__more {
     &-link {
       color: $white;

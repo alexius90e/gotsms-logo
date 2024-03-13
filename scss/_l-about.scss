@@ -20,26 +20,6 @@
     background-size: 336px;
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 50px;
-    height: 57px;
-    background-color: $gray;
-
-    @include desktop {
-      bottom: 38px;
-      height: 48px;
-    }
-
-    @include tablet {
-      bottom: 20px;
-      height: 28px;
-    }
-  }
-
   & .container {
     display: flex;
     gap: 244px;
@@ -270,9 +250,6 @@
 .dark .about {
   background: url(../assets/about-bg-dark.svg) top left no-repeat;
 
-  &::before {
-    background-color: $black;
-  }
 
   &__services {
     &-info {
