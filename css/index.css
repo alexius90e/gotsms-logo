@@ -24,6 +24,9 @@ body.dark {
   color: #ffffff;
   background-color: #0b1020;
 }
+body.hidden {
+  overflow: hidden;
+}
 
 h2 {
   margin: 0;

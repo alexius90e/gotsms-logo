@@ -28,6 +28,10 @@ body {
     color: $white;
     background-color: $darkBlue;
   }
+
+  &.hidden {
+    overflow: hidden;
+  }
 }
 
 h2 {
