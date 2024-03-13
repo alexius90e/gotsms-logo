@@ -58,3 +58,15 @@
     }
   }
 }
+
+.dark .partners {
+  background-color: rgba($color: $white, $alpha: 0.02);
+
+  &__logo {
+    filter: brightness(1);
+  }
+
+  &__link {
+    color: $white;
+  }
+}
