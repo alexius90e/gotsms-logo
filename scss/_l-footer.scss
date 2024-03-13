@@ -18,6 +18,7 @@
     content: '';
     position: absolute;
     background: url(../assets/circle-bg.svg) center no-repeat;
+    background-size: contain;
   }
 
   &::before {
@@ -25,7 +26,6 @@
     right: -85px;
     height: 695px;
     width: 695px;
-    background-size: 695px;
 
     @include desktop {
       top: -92px;
@@ -37,7 +37,6 @@
       right: -213px;
       height: 539px;
       width: 539px;
-      background-size: 539px;
     }
   }
 
@@ -46,7 +45,6 @@
     right: 239px;
     height: 491px;
     width: 491px;
-    background-size: 491px;
 
     @include desktop {
       top: -15px;
@@ -255,6 +253,34 @@
       &:first-child::after {
         content: '|';
       }
+    }
+  }
+}
+
+.dark .footer {
+  color: $white;
+  background-color: $black;
+
+  &::after,
+  &::before {
+    background-image: url(../assets/circle-bg-dark.svg);
+  }
+
+  &__contacts {
+    &-tg {
+      &-figure {
+        border: 1px solid rgba($color: $white, $alpha: 0.2);
+
+        &-image {
+          filter: brightness(1);
+        }
+      }
+    }
+  }
+
+  &__docs {
+    &-link {
+      color: $white;
     }
   }
 }

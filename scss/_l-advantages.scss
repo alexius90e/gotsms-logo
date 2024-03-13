@@ -132,3 +132,13 @@
     }
   }
 }
+
+.dark .advantages {
+  background-color: $black;
+
+  &__card {
+    &-figure {
+      filter: brightness(1);
+    }
+  }
+}

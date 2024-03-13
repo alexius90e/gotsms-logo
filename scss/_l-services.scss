@@ -52,8 +52,6 @@
     }
   }
 
-  
-
   &__title {
     margin: 0 0 108px;
 
@@ -115,7 +113,7 @@
     }
 
     &-link {
-      color: #1e1e1e;
+      color: $black;
       font-weight: 600;
       font-size: 20px;
       line-height: 110%;
@@ -128,6 +126,19 @@
 
     @include tablet {
       font-size: 14px;
+    }
+  }
+}
+
+.dark .services {
+  &::before,
+  &::after {
+    background-color: $black;
+  }
+
+  &__more {
+    &-link {
+      color: $white;
     }
   }
 }
