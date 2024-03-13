@@ -140,7 +140,7 @@
 
       &-count {
         margin: 0 0 15px;
-        color: #383838;
+        color: $black;
         font-family: 'Benzin Bold', sans-serif;
         font-weight: 400;
         font-size: 30px;
@@ -261,9 +261,38 @@
 
       @include tablet {
         position: static;
-
         width: 130%;
       }
+    }
+  }
+}
+
+.dark .about {
+  background: url(../assets/about-bg-dark.svg) top left no-repeat;
+
+  &::before {
+    background-color: $black;
+  }
+
+  &__services {
+    &-info {
+      &-count {
+        color: $purple;
+      }
+    }
+  }
+
+  &__accept {
+    &-images {
+      &-item {
+        filter: brightness(1);
+      }
+    }
+  }
+
+  &__figure {
+    &-image {
+      background-image: url(../assets/about-phone-dark.svg);
     }
   }
 }

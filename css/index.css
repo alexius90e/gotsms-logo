@@ -1392,7 +1392,7 @@ img {
 }
 .about__services-info-count {
   margin: 0 0 15px;
-  color: #383838;
+  color: #070707;
   font-family: "Benzin Bold", sans-serif;
   font-weight: 400;
   font-size: 30px;
@@ -1521,6 +1521,22 @@ img {
     position: static;
     width: 130%;
   }
+}
+
+.dark .about {
+  background: url(../assets/about-bg-dark.svg) top left no-repeat;
+}
+.dark .about::before {
+  background-color: #070707;
+}
+.dark .about__services-info-count {
+  color: #697eed;
+}
+.dark .about__accept-images-item {
+  filter: brightness(1);
+}
+.dark .about__figure-image {
+  background-image: url(../assets/about-phone-dark.svg);
 }
 
 .advantages {
