@@ -27,9 +27,30 @@
         </div>
 
         <nav class="header__nav">
-          <a class="header__nav-link" href="#">Top up balance</a>
-          <a class="header__nav-link" href="#">Features</a>
-          <a class="header__nav-link" href="#">FAQ</a>
+          <div class="header__nav-logo logo">
+            <a class="logo__link" href="./">
+              <img class="logo__image close" src="./assets/logo.svg" alt="logo" />
+            </a>
+          </div>
+
+          <button class="header__nav-close close"></button>
+
+          <a class="header__nav-link close" href="#">Top up balance</a>
+          <a class="header__nav-link close" href="#">Features</a>
+          <a class="header__nav-link close" href="#">FAQ</a>
+
+          <div class="header__nav-controls">
+            <button class="header__login button button_secondary close">Log in</button>
+
+            <button class="header__subscription button button_secondary close">
+              Buy subscription
+            </button>
+
+            <div class="theme-toggler">
+              <div class="theme-toggler__moon"></div>
+              <div class="theme-toggler__sun"></div>
+            </div>
+          </div>
         </nav>
 
         <div class="header__block">
